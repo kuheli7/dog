@@ -77,11 +77,11 @@ const BreedList = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-900">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Dog Breed Explorer</h1>
-            <p className="text-lg text-gray-600">Discover amazing dog breeds from around the world</p>
+            <h1 className="text-4xl font-bold text-white mb-4">Dog Breed Explorer</h1>
+            <p className="text-lg text-gray-300">Discover amazing dog breeds from around the world</p>
           </div>
           <div className="flex flex-col items-center justify-center min-h-64 space-y-4">
             <div className="relative">
@@ -89,10 +89,10 @@ const BreedList = () => {
               <div className="w-16 h-16 border-4 border-blue-600 border-solid rounded-full animate-spin absolute top-0 left-0 border-t-transparent"></div>
             </div>
             <div className="text-center">
-              <h3 className="text-lg font-semibold text-gray-700 mb-2">
+              <h3 className="text-lg font-semibold text-gray-300 mb-2">
                 Fetching Dog Breeds
               </h3>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-400">
                 Please wait while we load the amazing dog breeds for you...
               </p>
             </div>
@@ -104,11 +104,11 @@ const BreedList = () => {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-900">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Dog Breed Explorer</h1>
-            <p className="text-lg text-gray-600">Discover amazing dog breeds from around the world</p>
+            <h1 className="text-4xl font-bold text-white mb-4">Dog Breed Explorer</h1>
+            <p className="text-lg text-gray-300">Discover amazing dog breeds from around the world</p>
           </div>
           <div className="flex flex-col items-center justify-center min-h-64 space-y-6 bg-red-50 rounded-lg border border-red-200 p-8">
             <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
@@ -138,12 +138,12 @@ const BreedList = () => {
       </div>
     );
   }  return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-900">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Dog Breed Explorer</h1>
-          <p className="text-lg text-gray-600 mb-6">
+          <h1 className="text-4xl font-bold text-white mb-4">Dog Breed Explorer</h1>
+          <p className="text-lg text-gray-300 mb-6">
             Discover amazing dog breeds from around the world
           </p>
           <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
@@ -153,7 +153,7 @@ const BreedList = () => {
         </div>
 
         {/* Search and Filter Bar */}
-        <div className="bg-white rounded-lg shadow-md p-6 mb-8 border border-gray-200">
+        <div className="bg-gray-800 rounded-lg shadow-md p-6 mb-8 border border-gray-700">
           <div className="flex flex-col md:flex-row gap-4 items-center">
             {/* Search Input */}
             <div className="flex-1 relative">
@@ -167,20 +167,20 @@ const BreedList = () => {
                 placeholder="Search by breed name or description..."
                 value={searchTerm}
                 onChange={handleSearchChange}
-                className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 text-gray-900 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                className="block w-full pl-10 pr-3 py-2 border border-gray-600 rounded-md leading-5 bg-gray-700 placeholder-gray-400 text-white focus:outline-none focus:placeholder-gray-300 focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
 
             {/* Hypoallergenic Filter */}
             <div className="flex items-center space-x-2">
-              <label htmlFor="hypoallergenic-filter" className="text-sm font-medium text-gray-700">
+              <label htmlFor="hypoallergenic-filter" className="text-sm font-medium text-gray-300">
                 Filter:
               </label>
               <select
                 id="hypoallergenic-filter"
                 value={hypoallergenicFilter}
                 onChange={handleFilterChange}
-                className="block w-40 px-3 py-2 border border-gray-300 rounded-md leading-5 bg-white text-gray-900 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                className="block w-40 px-3 py-2 border border-gray-600 rounded-md leading-5 bg-gray-700 text-white focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
               >
                 <option value="all">All Breeds</option>
                 <option value="hypoallergenic">Hypoallergenic</option>
@@ -192,7 +192,7 @@ const BreedList = () => {
             {(searchTerm || hypoallergenicFilter !== 'all') && (
               <button
                 onClick={clearFilters}
-                className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 border border-gray-300 rounded-md hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
+                className="px-4 py-2 text-sm font-medium text-gray-300 bg-gray-700 border border-gray-600 rounded-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
               >
                 Clear Filters
               </button>
@@ -203,13 +203,13 @@ const BreedList = () => {
         {/* Results */}
         {filteredBreeds.length === 0 ? (
           <div className="text-center py-12">
-            <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </div>
-            <h3 className="text-lg font-medium text-gray-900 mb-2">No breeds found</h3>
-            <p className="text-gray-500">
+            <h3 className="text-lg font-medium text-white mb-2">No breeds found</h3>
+            <p className="text-gray-400">
               Try adjusting your search criteria or clearing the filters.
             </p>
           </div>
@@ -224,13 +224,13 @@ const BreedList = () => {
 
         {/* Footer */}
         <div className="mt-12 text-center">
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-400">
             Data provided by{' '}
             <a 
               href="https://dogapi.dog" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-blue-600 hover:text-blue-500 transition-colors duration-200"
+              className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
             >
               Dog API
             </a>

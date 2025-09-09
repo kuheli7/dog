@@ -27,7 +27,7 @@ const BreedCard = ({ breed }) => {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-105 border border-gray-200">
+    <div className="bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-105 border border-gray-700">
       {/* Card Header */}
       <div className="bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-4">
         <h3 className="text-xl font-bold text-white truncate">{name}</h3>
@@ -45,28 +45,28 @@ const BreedCard = ({ breed }) => {
       {/* Card Body */}
       <div className="p-6">
         {/* Description */}
-        <p className="text-gray-700 text-sm leading-relaxed mb-4 line-clamp-3">
+        <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
           {description.length > 150 ? description.substring(0, 150) + '...' : description}
         </p>
 
         {/* Breed Details */}
         <div className="space-y-3">
           {/* Lifespan */}
-          <div className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+          <div className="flex items-center justify-between bg-gray-700 rounded-lg p-3">
             <div className="flex items-center">
-              <span className="text-sm font-medium text-gray-600">Lifespan</span>
+              <span className="text-sm font-medium text-gray-300">Lifespan</span>
             </div>
-            <span className="text-sm font-bold text-gray-900">
+            <span className="text-sm font-bold text-white">
               {formatLifespan(life)}
             </span>
           </div>
 
           {/* Weight Range */}
-          <div className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+          <div className="flex items-center justify-between bg-gray-700 rounded-lg p-3">
             <div className="flex items-center">
-              <span className="text-sm font-medium text-gray-600">Weight Range</span>
+              <span className="text-sm font-medium text-gray-300">Weight Range</span>
             </div>
-            <span className="text-sm font-bold text-gray-900">
+            <span className="text-sm font-bold text-white">
               {formatWeightRange(male_weight, female_weight)}
             </span>
           </div>
@@ -90,8 +90,8 @@ const BreedCard = ({ breed }) => {
       </div>
 
       {/* Card Footer */}
-      <div className="px-6 py-3 bg-gray-50 border-t border-gray-200">
-        <p className="text-xs text-gray-500 truncate">
+      <div className="px-6 py-3 bg-gray-700 border-t border-gray-600">
+        <p className="text-xs text-gray-400 truncate">
           Breed ID: {id.substring(0, 8)}...
         </p>
       </div>
